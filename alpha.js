@@ -707,7 +707,7 @@ async function Botstarted() {
             "externalAdReply": {
                 "title": `Selamat ${salam} ${pushname}`,
                 "body": footer_text,
-                "previewType": "PHOTO",
+                "previewType": 0,
                 "thumbnailUrl": ``,
                 "thumbnail": pp_bot,
                 "sourceUrl": myweb
