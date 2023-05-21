@@ -17,7 +17,6 @@ const axios = require('axios');
 const moment = require('moment-timezone');
 const ms = toMs = require('ms');
 const FormData = require("form-data");
-const os = require('os');
 const {
     fromBuffer
 } = require('file-type')
@@ -25,6 +24,7 @@ const fetch = require('node-fetch')
 const {
     exec
 } = require("child_process")
+const os = require('os')
 const {
     smsg,
     fetchJson,
