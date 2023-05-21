@@ -528,6 +528,32 @@ ${isSurender ? '' : ``}`.trim()
 
 
         switch (command) {
+            case 'getcase': {
+                if (!isCreator) return reply(mess.owner)
+                if (!text) return reply("ambil case ap ?")
+                try {
+                  let nana = await getCase(text)
+                  reply(nana)
+                } catch (err) {
+                  reply('Case tidak ditemukan!!')
+                }
+              }
+            break
+            case 'getsesi': {
+                if (!isCreator) return reply(mess.owner)
+                try {
+                    exec("tar -czf sesi.tar.gz ./session")
+                } catch (error) {
+                    reply("gagal compress!!")
+                }
+                let media = fs.readFileSync("./sesi.tar.gz")
+                alpha.sendMessage(m.chat, {
+                  document: media,
+                  mimetype: 'application/tar.gz',
+                  fileName: global.sessionName,
+                }, { quoted: m })
+              }
+            break
             case 'ping': {
                 const used = process.memoryUsage()
                 const cpus = os.cpus().map(cpu => {
@@ -574,6 +600,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 `.trim()
                 reply(respon)
             }
+            break
             case 'owner':
             case 'creator': {
                 alpha.sendContact(m.chat, global.owner, m)
