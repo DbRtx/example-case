@@ -17,6 +17,7 @@ const axios = require('axios');
 const moment = require('moment-timezone');
 const ms = toMs = require('ms');
 const FormData = require("form-data");
+const os = require('os');
 const {
     fromBuffer
 } = require('file-type')
