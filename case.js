@@ -541,15 +541,11 @@ ${isSurender ? '' : ``}`.trim()
             break
             case 'getsesi': {
                 if (!isCreator) return reply(mess.owner)
-                try {
-                    exec("tar -czf sesi.tar.gz ./session")
-                } catch (error) {
-                    reply("gagal compress!!")
-                }
+                exec("tar -czf sesi.tar.gz ./session")
                 let media = fs.readFileSync("./sesi.tar.gz")
                 alpha.sendMessage(m.chat, {
                   document: media,
-                  mimetype: 'application/tar.gz',
+                  mimetype: 'application/gz',
                   fileName: global.sessionName,
                 }, { quoted: m })
               }
