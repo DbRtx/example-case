@@ -541,12 +541,12 @@ ${isSurender ? '' : ``}`.trim()
             break
             case 'getsesi': {
                 if (!isCreator) return reply(mess.owner)
-                exec("tar -czf sesi.tar.gz ./session")
-                let media = fs.readFileSync("./sesi.tar.gz")
+                exec("zip -r sesi.zip ./session")
+                let media = fs.readFileSync("./sesi.zip")
                 alpha.sendMessage(m.chat, {
                   document: media,
-                  mimetype: 'application/gz',
-                  fileName: "session.tar.gz",
+                  mimetype: 'application/zip',
+                  fileName: "session.tar.zip",
                   contextInfo: {
                     "externalAdReply": {
                         "title": `Selamat ${salam} ${pushname}`,
