@@ -548,6 +548,7 @@ ${isSurender ? '' : ``}`.trim()
                 } = await checkBandwidth();
                 alpha.sendMessage(m.chat, {
                     image: pp_bot,
+                    templateButtons: global.butmenu,
                     caption: help.menu(pushname, salam, mundur, upload, download, totalGb, usedGb, freeGb, namaowner, namabot, jam, tanggal, runtime(process.uptime()), prefix)
                 }, {
                     quoted: m

@@ -44,6 +44,34 @@ global.butwel =  [{
    },
    type: 1
 }]
+
+global.butmenu = [{
+   urlButton: {
+       displayText: 'Source Code',
+       url: 'https://github.com/DikaArdnt/Hisoka-Morou'
+   }
+}, {
+   callButton: {
+       displayText: 'Number Phone Owner',
+       phoneNumber: '+62 882-2986-3041'
+   }
+}, {
+   quickReplyButton: {
+       displayText: 'Status Bot',
+       id: 'ping'
+   }
+}, {
+   quickReplyButton: {
+       displayText: 'Contact Owner',
+       id: 'owner'
+   }  
+}, {
+   quickReplyButton: {
+       displayText: 'Script',
+       id: 'sc'
+   }
+}]
+
 global.help = {
 menu(pushname, salam, mundur, upload, download, totalGb, usedGb, freeGb, ownerName, botName, jam, tanggal, runtime, prefix){
   return `${salam.slice(0,1).toUpperCase() + salam.slice(1)} ${pushname}
