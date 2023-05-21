@@ -37,7 +37,9 @@ const {
     isUrl,
     hitungmundur,
     checkBandwidth,
-    runtime
+    runtime,
+    formatp,
+    getCase
 } = require('./lib/simple')
 const {
     isSetClose,
