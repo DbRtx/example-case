@@ -58,17 +58,17 @@ global.butmenu = [{
 }, {
    quickReplyButton: {
        displayText: 'Status Bot',
-       id: 'ping'
+       id: '.ping'
    }
 }, {
    quickReplyButton: {
        displayText: 'Contact Owner',
-       id: 'owner'
+       id: '.owner'
    }  
 }, {
    quickReplyButton: {
        displayText: 'Script',
-       id: 'sc'
+       id: '.sc'
    }
 }]
 
