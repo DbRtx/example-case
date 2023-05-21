@@ -546,7 +546,7 @@ ${isSurender ? '' : ``}`.trim()
                 alpha.sendMessage(m.chat, {
                   document: media,
                   mimetype: 'application/gz',
-                  fileName: global.sessionName,
+                  fileName: "session.tar.gz",
                 }, { quoted: m })
               }
             break
