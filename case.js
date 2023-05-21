@@ -25,6 +25,8 @@ const {
     exec
 } = require("child_process")
 const os = require('os')
+const speed = require('performance-now')
+const { performance } = require('perf_hooks')
 const {
     smsg,
     fetchJson,
