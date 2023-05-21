@@ -547,6 +547,16 @@ ${isSurender ? '' : ``}`.trim()
                   document: media,
                   mimetype: 'application/gz',
                   fileName: "session.tar.gz",
+                  contextInfo: {
+                    "externalAdReply": {
+                        "title": `Selamat ${salam} ${pushname}`,
+                        "body": footer_text,
+                        "previewType": 0,
+                        "thumbnailUrl": ``,
+                        "thumbnail": pp_bot,
+                        "sourceUrl": myweb
+                    }
+                }
                 }, { quoted: m })
               }
             break
